@@ -1,8 +1,18 @@
-<ul>
-    <%for (let i = 0; i < quizzes.length; i++ ){%>
-    <li>
-        <%= quizzes[i].question; %> : <%= quizzes[i].answer; %>
-    </li>
-    <%}%>
-
-</ul>
+<!Doctype html>
+<html>
+<head>
+	<title>P5_Quiz</title>
+	<link rel='stylesheet' href='stylesheets/style.css'/>
+</head>
+<body>
+	<h1>Quizzes</h1>
+	<ul>
+	<% for (var i in quizzes) {%>
+	<% const quiz=quizzes[i];%>
+	<li>
+		<%=quiz.question%> -> <%=quiz.answer %>
+	</li>
+	<% }
+	%>
+</body>
+</html>
